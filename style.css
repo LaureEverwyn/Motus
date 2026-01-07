@@ -1,0 +1,21 @@
+body {
+    background-color: #2B2B2B;
+}
+
+h1 {
+    color: white;
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    display: flex;
+    justify-content: center;
+
+    td {
+        background-color: blue;
+        border: 2px solid white;
+        padding: 44px;
+    }
+}
