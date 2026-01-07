@@ -19,3 +19,15 @@ table {
         padding: 44px;
     }
 }
+
+div {
+    display: flex;
+    justify-content: center;
+
+    button {
+        border-radius: 50px;
+        padding: 10px;
+        margin: 10px;
+    }
+
+}
