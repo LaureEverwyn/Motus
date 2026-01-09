@@ -17,6 +17,18 @@ table {
         background-color: blue;
         border: 2px solid white;
         padding: 44px;
+
+        .bien {
+            background-color: green;
+        }
+
+        .mal {
+            background-color: orange;
+        }
+
+        .faux {
+            background-color: red;
+        }
     }
 }
 
