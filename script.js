@@ -86,9 +86,7 @@ bouton.addEventListener("click", () => {
 
     if (motEcrit === motChoisi) {
         alert("Bravo vous avez gagné !");
-    } else {
-        alert("Vous n'avez pas trouver, recommencer !");
-        positionLigne =+ 1
+        return;
     }
 
     positionLigne++;
