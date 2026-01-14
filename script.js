@@ -1,12 +1,13 @@
 /* Tableau */
 
 const mots = ["arbre","plage","livre","table","verre","chien","fleur","route","neige","pomme","lampe","monde",
-    "sable","pluie","porte","carte","train","fruit", "herbe", "ville"];
+    "sable","pluie","porte","carte","train","fruit", "herbe", "ville", "laure", "motus", "lucas"];
 
 /* Variables */
 
 let positionLigne = 1
 let positionCase = 1
+let tentativesRestantes = 6
 
 /* Fonction */
 
@@ -39,6 +40,7 @@ window.addEventListener("keydown", (event) => {
 })
 
 const bouton = document.getElementById("valider")
+const afficheTentative = document.getElementById("tentative")
 
 bouton.addEventListener("click", () => {
     let motEcrit = "";
@@ -88,6 +90,9 @@ bouton.addEventListener("click", () => {
         alert("Bravo vous avez gagné !");
         return;
     }
+
+    tentativesRestantes--;
+    afficheTentative.textContent = "Tentatives restantes : " + tentativesRestantes;
 
     positionLigne++;
     positionCase = 1;
