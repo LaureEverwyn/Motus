@@ -17,14 +17,14 @@ const chiffreAleatoire = (min, max) => {
 
 /* Logique */
 
-const motChoisi = mots[chiffreAleatoire(0, mots.length - 1)]
+const motChoisi = mots[chiffreAleatoire(0, mots.length - 1)].toUpperCase()
 
 window.addEventListener("keydown", (event) => {
     if (/^[a-z]$/i.test(event.key)) {
         if (positionCase <= 5) {
             console.log(positionCase)
             const classe = document.querySelector('#ligne_' + positionLigne + ' ' + '.case_' + positionCase)
-            classe.textContent = event.key
+            classe.textContent = event.key.toUpperCase()
             positionCase = positionCase + 1
         }
     }
@@ -48,7 +48,7 @@ bouton.addEventListener("click", () => {
         const caseLettre = document.querySelector(
             '#ligne_' + positionLigne + ' .case_' + i
         );
-        motEcrit += caseLettre.textContent.toLowerCase();
+        motEcrit += caseLettre.textContent.toUpperCase();
     }
 
     if (motEcrit.includes(".")){
@@ -97,3 +97,8 @@ bouton.addEventListener("click", () => {
     }
 });
 
+const bouton_recharge = document.getElementById("new")
+
+bouton_recharge.addEventListener("click", () => {
+    location.reload()
+});
