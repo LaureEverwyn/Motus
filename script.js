@@ -37,6 +37,10 @@ window.addEventListener("keydown", (event) => {
             classe.textContent = '.'
         }
     }
+
+    if (event.key === "Enter"){
+        bouton.click()
+    }
 })
 
 const bouton = document.getElementById("valider")
