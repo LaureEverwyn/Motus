@@ -1,14 +1,28 @@
 body {
-    background-color: #2B2B2B;
+    background-color: #152B2F;
 }
 
 h1 {
-    color: white;
-    font-size: 36px;
+    color: black;
+    font-size: 30px;
+    font-family: sans-serif;
     display: flex;
     justify-content: center;
     margin: 10px;
+}
 
+.titre {
+    gap: 6px;
+}
+
+span {
+    background-color: #EDEABB;
+    border-radius: 6px;
+    line-height: 1;
+    width: 18px;
+    height: 18px;
+    padding: 12px;
+    text-align: center;
 }
 
 p {
@@ -24,25 +38,28 @@ table {
     justify-content: center;
 
     td {
-        background-color: blue;
-        border: 2px solid white;
-        padding: 44px;
+        text-align: center;
+        background-color: #EDEABB;
+        border-radius: 6px;
+        color: black;
+        font-family: sans-serif;
+        line-height: 1;
+        width: 24px;
+        height: 24px;
+        padding: 12px;
     }
 }
 
 .bien {
-    background-color: green;
-    color: white;
+    background-color: #82CCB4;
 }
 
 .mal {
-    background-color: orange;
-    color: white;
+    background-color: #FFD890;
 }
 
 .faux {
-    background-color: red;
-    color: white;
+    background-color: #E3E6E2BA;
 }
 
 div {
