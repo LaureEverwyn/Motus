@@ -1,7 +1,7 @@
 /* Tableau */
 
-const mots = ["arbre","plage","livre","table","verre","chien","fleur","route","neige","pomme","lampe","monde",
-    "sable","pluie","porte","carte","train","fruit", "herbe", "ville", "laure", "motus", "lucas"];
+const mots = ["lune", "pain", "chat","vent", "lion", "rose", "bois","arbre","plage","livre","table","verre","chien","fleur","route","neige","pomme","lampe","monde",
+    "sable","pluie","porte","carte","train","fruit", "herbe", "ville", "laure", "motus", "lucas","avenir", "sourire", "liberté", "couleur", "voyage", "justice", "nature", "soleil", "esprit", "famille"];
 
 /* Variables */
 
@@ -12,17 +12,45 @@ let tentativesRestantes = 6
 /* Fonction */
 
 const chiffreAleatoire = (min, max) => {
-    return Math.round(Math.random() * (max - min) + min);
-}
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+};
 
+/* Choix du mot */
 
-/* Logique */
+const motChoisi = mots[chiffreAleatoire(0, mots.length - 1)].toUpperCase();
+const longueurMot = motChoisi.length;
 
-const motChoisi = mots[chiffreAleatoire(0, mots.length - 1)].toUpperCase()
+/* récupération de la table */
+
+const grille = document.getElementById("grille");
+
+/* création de la grille */
+
+const creerGrille = (lignes, colonnes) => {
+    grille.innerHTML = "";
+
+    for (let l = 1; l <= lignes; l++) {
+        const tr = document.createElement("tr");
+        tr.id = "ligne_" + l;
+
+        for (let c = 1; c <= colonnes; c++) {
+            const td = document.createElement("td");
+            td.className = "case_" + c;
+            td.textContent = ".";
+            tr.appendChild(td);
+        }
+
+        grille.appendChild(tr);
+    }
+};
+
+creerGrille(6, longueurMot);
+
+/* Lettre et Touche */
 
 window.addEventListener("keydown", (event) => {
     if (/^[a-z]$/i.test(event.key)) {
-        if (positionCase <= 5) {
+        if (positionCase <= longueurMot) {
             console.log(positionCase)
             const classe = document.querySelector('#ligne_' + positionLigne + ' ' + '.case_' + positionCase)
             classe.textContent = event.key.toUpperCase()
@@ -45,12 +73,13 @@ window.addEventListener("keydown", (event) => {
 
 const bouton = document.getElementById("valider")
 const afficheTentative = document.getElementById("tentative")
+/* test le mot */
 
 bouton.addEventListener("click", () => {
     let motEcrit = "";
     let lettresRestantes = motChoisi.split("");
 
-    for (let i = 1; i <= 5; i++) {
+    for (let i = 1; i <= longueurMot; i++) {
         const caseLettre = document.querySelector(
             '#ligne_' + positionLigne + ' .case_' + i
         );
@@ -62,7 +91,7 @@ bouton.addEventListener("click", () => {
         return;
     }
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < longueurMot; i++) {
         const caseLettre = document.querySelector(
             '#ligne_' + positionLigne + ' .case_' + (i + 1)
         );
@@ -73,7 +102,7 @@ bouton.addEventListener("click", () => {
         }
     }
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < longueurMot; i++) {
         const caseLettre = document.querySelector(
             '#ligne_' + positionLigne + ' .case_' + (i + 1)
         );

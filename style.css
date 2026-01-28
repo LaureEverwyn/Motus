@@ -1,5 +1,6 @@
 body {
     background-color: #152B2F;
+    font-family: "Nunito", sans-serif;
 }
 
 h1 {
@@ -18,11 +19,13 @@ h1 {
 span {
     background-color: #EDEABB;
     border-radius: 6px;
-    line-height: 1;
-    width: 18px;
-    height: 18px;
-    padding: 12px;
-    text-align: center;
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: sans-serif;
 }
 
 p {
@@ -34,21 +37,23 @@ p {
 }
 
 table {
-    display: flex;
-    justify-content: center;
-
-    td {
-        text-align: center;
-        background-color: #EDEABB;
-        border-radius: 6px;
-        color: black;
-        font-family: sans-serif;
-        line-height: 1;
-        width: 24px;
-        height: 24px;
-        padding: 12px;
-    }
+    margin: auto;
+    border-spacing: 6px 14px;
 }
+
+
+table td {
+    text-align: center;
+    background-color: #EDEABB;
+    border-radius: 6px;
+    color: black;
+    font-family: sans-serif;
+    font-weight: 600;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+}
+
 
 .bien {
     background-color: #82CCB4;
@@ -65,11 +70,16 @@ table {
 div {
     display: flex;
     justify-content: center;
+}
 
-    button {
-        border-radius: 50px;
-        padding: 10px;
-        margin: 10px;
-    }
-
+div button {
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    border-radius: 50px;
+    background-color: #82CCB4;
+    color: #2B2B2B;
+    font-size: 14px;
+    border: none;
+    padding: 10px 18px;
+    margin: 10px;
 }
