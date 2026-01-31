@@ -1,24 +1,26 @@
-/* Tableau */
-
-const mots = ["lune", "pain", "chat","vent", "lion", "rose", "bois","arbre","plage","livre","table","verre","chien","fleur","route","neige","pomme","lampe","monde",
-    "sable","pluie","porte","carte","train","fruit", "herbe", "ville", "laure", "motus", "lucas","avenir", "sourire", "liberté", "couleur", "voyage", "justice", "nature", "soleil", "esprit", "famille"];
-
 /* Variables */
 
-let positionLigne = 1
-let positionCase = 1
-let tentativesRestantes = 6
+let mots = []; 
+let motChoisi ="";
+let longueurMot = 0; 
 
-/* Fonction */
+let positionLigne = 1;
+let positionCase = 1;
+let tentativesRestantes = 6;
+
+
+/* Choix Aleatoire */
 
 const chiffreAleatoire = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
-/* Choix du mot */
+/* Tableau */
 
-const motChoisi = mots[chiffreAleatoire(0, mots.length - 1)].toUpperCase();
-const longueurMot = motChoisi.length;
+async function getMots() {
+    const response = await fetch("./mots.json");
+    mots = await response.json();
+};
 
 /* récupération de la table */
 
@@ -44,7 +46,18 @@ const creerGrille = (lignes, colonnes) => {
     }
 };
 
-creerGrille(6, longueurMot);
+/* Choisi le mot */
+async function Jeu() {
+    await getMots();
+    motChoisi = mots[chiffreAleatoire(0, mots.length - 1)].toUpperCase();
+    longueurMot = motChoisi.length;
+
+    console.log("Mot secret :", motChoisi);
+    
+    creerGrille(6, longueurMot);
+};
+
+Jeu();
 
 /* Lettre et Touche */
 
@@ -73,6 +86,7 @@ window.addEventListener("keydown", (event) => {
 
 const bouton = document.getElementById("valider")
 const afficheTentative = document.getElementById("tentative")
+
 /* test le mot */
 
 bouton.addEventListener("click", () => {
