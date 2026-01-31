@@ -105,13 +105,13 @@ bouton.addEventListener("click", () => {
     if (!mots.includes(motEcrit.toLowerCase())){
         alert("Le mot n'existe pas")
         for (let i = 0; i < longueurMot; i++) {
-        const caseLettre = document.querySelector(
-            '#ligne_' + positionLigne + ' .case_' + (i + 1)
-        );
+            const caseLettre = document.querySelector(
+                '#ligne_' + positionLigne + ' .case_' + (i + 1)
+            );
 
-        caseLettre.innerHTML = ".";
-        positionCase = 1
-    }
+            caseLettre.innerHTML = ".";
+            positionCase = 1
+        }
         return;
     }
 
