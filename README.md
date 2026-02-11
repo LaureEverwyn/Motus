@@ -7,11 +7,12 @@ git clone git@github.com:LaureEverwyn/Motus.git
 
 # Utiliser le jeu
 
-1. Ouvrir **index.html**
-2. Ecrire le premier mot
-3. Appuyer sur le bouton **Valider** ou sur **Entrée** 
-4. Le jeu vous dira si le mot est trouvé ou non 
-5. Dès que la partie est terminée, cliquez sur le bouton **Nouvelle partie** pour rejouer.
+1. Ouvrir le dossier avec un editeur de code (Visual studio code)
+2. Lancer via le live serveur **index.html**
+3. Ecrire le premier mot
+4. Appuyer sur le bouton **Valider** ou sur **Entrée** 
+5. Le jeu vous dira si le mot est trouvé ou non 
+6. Dès que la partie est terminée, cliquez sur le bouton **Nouvelle partie** pour rejouer.
 
 ## Légende 
 
