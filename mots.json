@@ -10,11 +10,10 @@
   "cher", "dont", "drap", "neuf", "note", "pied", "pois", "pont", 
   "prix", "quoi", "sept", "bleu", "bout", "brin", "choc", "pic", 
   "rond", "fils", "face", "faim", "gain", "mien", "plis", "poil", 
-  "roux", "sale", "sien", "sol", "son", "sou", "vers", "vice", 
-  "buts", "camp", "clos", "dons", "gais", "voix", "oser", "pans", 
-  "tape", "août", "cinq", "lots", "mers", "murs", "nuls", "pots", 
-  "tram", "base", "bass", "cous", "doss", "grue", "mont", "porc",
-  "vent",
+  "roux", "sale", "sien", "vers", "vice", "buts", "camp", "clos", 
+  "dons", "gais", "voix", "oser", "pans", "tape", "août", "cinq", 
+  "lots", "mers", "murs", "nuls", "pots", "tram", "base", "bass", 
+  "cous", "doss", "grue", "mont", "porc", "vent", "oeil",
 
   "terre", "table", "carte", "livre", "rouge", "sucre", "vache", "achat", 
   "barbe", "matin", "vigne", "femme", "jeudi", "lapin", "lundi", "poire", 
@@ -39,6 +38,14 @@
   "vieux", "agent", "chose", "corne", "franc", "fuite", "heure", "jambe", 
   "lever", "ligue", "nappe", "noble", "ondes", "radio", "repas", "sapin", 
   "satin", "suave", "tabac", "tante", "tenir", "villa", "wagon","paver",
+  "palme", "avion", "bague", "balai", "banal", "bazar", "bijou", "cable", 
+  "calme", "champ", "danse", "debut", "devoir", "eclat", "ecrit", "ecran", 
+  "etage", "façon", "gazon", "glace", "goute", "honte", "hotel", "huile",
+  "ideal", "issue", "lache", "magie", "metal", "neige", "objet", "outil", 
+  "panne", "photo", "poche", "point", "porte", "pouce", "quart", "racle", 
+  "salle", "scene", "serre", "table", "texte", "trace", "train", "vague", 
+  "venir",
+
 
   "classe", "nature", "jardin", "brique", "moulin", "plante", "soleil", "triste", 
   "animal", "autour", "avenir", "bouche", "chemin", "cheval", "enfant", "propre", 
@@ -60,5 +67,10 @@
   "dignes", "divins", "espoir", "faveur", "forges", "gamine", "gibier", "grange", 
   "grappe", "mesure", "minute", "mirerz", "monter", "mordre", "mousse", "muscle", 
   "panier", "parfum", "parler", "romain", "ronger", "rougir", "sauver", "servir", 
-  "simple", "sonner", "sonore", "souper", "voyage"
+  "simple", "sonner", "sonore", "souper", "voyage","affaire", "anneau", "beauté",
+  "besoin", "bureau", "cadeau", "cerise", "chance", "choisi", "climat", "danger", 
+  "devoir", "effort", "espace", "esprit", "fouler", "gagner", "garder", "habits", 
+  "humain", "lancer", "maison", "marché", "moment", "nature", "oiseau", "parole", 
+  "plaire", "plante", "raison", "regler", "saison", "secret", "sentir", "souris", 
+  "valoir", "vivant"
 ]
