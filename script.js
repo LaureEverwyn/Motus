@@ -101,7 +101,7 @@ bouton.addEventListener("click", () => {
         alert("Le mot est incomplet !")
         return;
     }
-
+    /* Pour savoir si le mot existe ou pas: 
     if (!mots.includes(motEcrit.toLowerCase())){
         alert("Le mot n'existe pas")
         for (let i = 0; i < longueurMot; i++) {
@@ -113,7 +113,9 @@ bouton.addEventListener("click", () => {
             positionCase = 1
         }
         return;
-    }
+        }
+        */
+    
 
     for (let i = 0; i < longueurMot; i++) {
         const caseLettre = document.querySelector(
